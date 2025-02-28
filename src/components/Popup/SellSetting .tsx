@@ -1,0 +1,30 @@
+import React from 'react'
+
+const SellSetting = () => {
+  return (
+    <div className=' container w-full p-4  bg-white rounded-lg shadow-[4px_4px_0_0_black] border-2 border-black '>
+        <div className=' my-2'>
+            <label htmlFor="" className='mb-2 block text-black'>Set Min Sell Amount</label>
+            <input type="number" placeholder='0.00' className='w-full rounded-md border border-[#434C59] bg-white p-2 shadow-lg dark:bg-[#191919]' />
+        </div>
+        <div className=' my-2'>
+            <label htmlFor="" className='mb-2 block text-white'>Set Max Sell Amount</label>
+            <input type="number" placeholder='0.00' className='w-full rounded-md border border-[#434C59] bg-white p-2 shadow-lg dark:bg-[#191919]' />
+        </div>
+        <div className=' my-2'>
+            <label htmlFor="" className='mb-2 block text-white'>Set Slipage</label>
+            <input type="number" placeholder='0.00' className='w-full rounded-md border border-[#434C59] bg-white p-2 shadow-lg dark:bg-[#191919]' />
+        </div>
+        <div className=' my-2'>
+            <label htmlFor="" className='mb-2 block text-white'>Set Quick Sell</label>
+            <input type="number" placeholder='0.00' className='w-full rounded-md border border-[#434C59] bg-white p-2 shadow-lg dark:bg-[#191919]' />
+        </div>
+        <div className=' my-2'>
+            <button className='bg-primary-gradient mt-4 w-full rounded-md px-4 py-2 font-semibold text-white'>Apply</button>
+        </div>
+
+    </div>
+  )
+}
+
+export default SellSetting
