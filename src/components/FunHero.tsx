@@ -7,14 +7,14 @@ function FunHero() {
   return (
     <>
       <section
-        className="mt-1 flex flex-col items-center justify-center leading-6 px-4"
+        className="mt-18 flex flex-col items-center justify-center leading-6 px-4"
         aria-label="Solana Bundler Hero Section"
       >
-        <div className="mb-2 flex max-w-6xl flex-col items-center justify-between gap-8 sm:flex-row">
+        <div className="mb-2 flex max-w-6xl flex-col items-center justify-center gap-8 sm:flex-row">
           {/* Left Content */}
           <div className="w-full sm:w-1/2">
-            <h1 className="pb-4 text-4xl font-semibold tracking-tight  ">
-              Token Bundler
+            <h1 className="pb-4 text-4xl font-semibold text-center tracking-tight  ">
+             BSC Token Bundler
             </h1>
             <p className="mt-4  font-inter">
               A powerful tool for launching tokens and executing high-impact
@@ -34,16 +34,16 @@ function FunHero() {
           </div>
 
           {/* Right Image */}
-          <div className="w-full sm:w-1/2">
+          {/* <div className="w-full sm:w-1/2">
             <Image
-              src="/pump.png"
+              src="/bnb.svg"
               height={300}
               width={300}
               alt="Illustration of Solana Bundler"
               className="mx-auto"
               priority
             />
-          </div>
+          </div> */}
         </div>
       </section>
     </>

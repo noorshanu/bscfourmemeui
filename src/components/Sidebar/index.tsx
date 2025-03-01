@@ -105,13 +105,13 @@ const Sidebar: React.FC<SidebarProps> = ({
         {/* <!-- SIDEBAR HEADER --> */}
         <div className="flex flex-col items-center justify-between gap-2 px-6 py-2.5 ">
           <Link href="/" className=" flex items-center gap-2 mt-3 font-inter font-bold">
-          {/* /*<Image
-              width={isCollapsed ? 70 : 40} // Adjust logo size
+          <Image
+              width={isCollapsed ? 40 : 30} // Adjust logo size
               height={32}
-              src={isCollapsed ? "/logo.webp" : "/logo.webp"}
+              src={isCollapsed ? "/bnb.svg" : "/bnb.svg"}
               alt="Logo"
               priority
-            />*/ }
+            />
             <p>Bsctoolz</p>
           </Link>
 
