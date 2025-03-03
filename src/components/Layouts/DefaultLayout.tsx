@@ -11,7 +11,7 @@ export default function DefaultLayout({
   children: React.ReactNode;
 }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(true);
 
   // Handle mouse enter and leave to toggle the sidebar
   const handleMouseEnter = () => setIsCollapsed(false);
