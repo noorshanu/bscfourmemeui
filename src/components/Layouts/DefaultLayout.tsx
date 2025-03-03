@@ -27,7 +27,8 @@ export default function DefaultLayout({
       <div className="flex">
         {/* Sidebar Start */}
         <div
-         
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
           className={`transition-[width] duration-500 ease-in-out ${
             isCollapsed ? " w-0 sm:w-22" : " w-auto sm:w-[14.05rem]"
           }`}

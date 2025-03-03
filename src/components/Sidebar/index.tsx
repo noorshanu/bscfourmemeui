@@ -105,13 +105,13 @@ const Sidebar: React.FC<SidebarProps> = ({
         {/* <!-- SIDEBAR HEADER --> */}
         <div className="flex flex-col items-center justify-between gap-2 px-6 py-2.5 ">
           <Link href="/" className=" flex items-center gap-2 mt-3 font-inter font-bold">
-          <Image
+          {/* <Image
               width={isCollapsed ? 40 : 30} // Adjust logo size
               height={32}
               src={isCollapsed ? "/bnb.svg" : "/bnb.svg"}
               alt="Logo"
               priority
-            />
+            /> */}
             <p>Bsctoolz</p>
           </Link>
 
@@ -166,7 +166,7 @@ const Sidebar: React.FC<SidebarProps> = ({
        
           </nav>
           {/* <!-- Sidebar Menu --> */}
-          <div className="flex justify-center items-center gap-4 text-sm w-full border-t py-4 border-[#dcdcdc39] mt-[150%]">
+          {/* <div className="flex justify-center items-center gap-4 text-sm w-full border-t py-4 border-[#dcdcdc39] mt-[150%]">
           <a href="https://x.com/pumpmint" target="_blank">
           <FaXTwitter className="text-3xl text-white" />
          
@@ -174,7 +174,7 @@ const Sidebar: React.FC<SidebarProps> = ({
           <a href="https://t.me/pumpmintbot" target="_blank">
           <FaTelegram className="text-3xl text-white" />
           </a>
-            </div>
+            </div> */}
         </div>
       </aside>
     </ClickOutside>
