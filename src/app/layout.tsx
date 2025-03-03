@@ -88,8 +88,12 @@ export default function RootLayout({
                 theme="dark"
               />
               <div className="bg-body4 relative">
-                <div className="fixed top-4 right-4 z-50">
-                  <CustomConnectWallet />
+                <div className="fixed top-4 w-full px-4 z-50">
+                  <div className="max-w-[1440px] mx-auto flex items-center justify-between ">
+                    <div></div>
+                    <img src="/logo4.png" alt="" className='h-[50px] sm:h-[70px]' />
+                    <CustomConnectWallet />
+                  </div>
                 </div>
                 <div className="z-[2]">
                   {loading ? <Loader /> : children}

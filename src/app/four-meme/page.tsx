@@ -121,7 +121,7 @@ const Page = () => {
   if (!isConnected) {
     return (
       <DefaultLayout>
-        <div className="container mx-auto px-6 mt-6 min-h-screen "> 
+        <div className="container mx-auto px-6 pb-12 pt-22 min-h-screen "> 
            <FunHero/>
           <div className="text-white text-xl text-center font-bold">[ Please connect your wallet first ]</div>
 
@@ -148,7 +148,7 @@ const Page = () => {
 
   return (
     <DefaultLayout>
-      <div className="container mx-auto px-8 py-12 min-h-screen">
+      <div className="container mx-auto px-8 pb-12 pt-22 min-h-screen">
         <div className="flex flex-col sm:flex-row justify-between items-center mb-12">
           <h1 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
             My Projects
@@ -247,7 +247,7 @@ const Page = () => {
                 <div className="flex justify-between items-start mb-6">
                   <h3 className="text-xl font-bold text-white">{project.name}</h3>
                   <div className="bg-black/30 p-2 rounded-xl">
-                    <FaEthereum className="text-[#85f0ab]" />
+                    <img src="/bsc.png" alt="" className='w-6 h-6' />
                   </div>
                 </div>
                 

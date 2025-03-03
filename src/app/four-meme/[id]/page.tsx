@@ -1388,7 +1388,7 @@ const Page = ({ params }: { params: { id: string } }) => {
   // Main content return (only shown after verification)
   return (
     <DefaultLayout>
-      <div className="container mx-auto px-8 py-12 min-h-screen">
+      <div className="container mx-auto px-8 pb-12 pt-22 min-h-screen">
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Left Column - Create Meme Token */}
           <div className="lg:w-1/3 bg-[#111] rounded-2xl border border-[#222] p-8">
