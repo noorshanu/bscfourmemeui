@@ -121,7 +121,7 @@ const Page = () => {
   if (!isConnected) {
     return (
       <DefaultLayout>
-        <div className="container mx-auto px-6 mt-6 min-h-screen ">
+        <div className="container mx-auto px-6 mt-6 min-h-screen "> 
            <FunHero/>
           <div className="text-white text-xl text-center font-bold">[ Please connect your wallet first ]</div>
 
@@ -217,7 +217,7 @@ const Page = () => {
                       Creating...
                     </>
                   ) : (
-                    'Create Project (1 ETH)'
+                    'Create Project '
                   )}
                 </button>
               </div>

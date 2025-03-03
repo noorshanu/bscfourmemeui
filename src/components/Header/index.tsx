@@ -73,6 +73,7 @@ const Header = (props: {
         </div>
 
         <div className="flex items-center gap-3 2xsm:gap-7">
+        
       
 
           {/* <!-- User Area --> */}
@@ -80,6 +81,9 @@ const Header = (props: {
         
           <div className="bg-body4 relative">
                 <div className="fixed top-4 right-4 z-50">
+                <div>
+            <img src="4meme.jpg" alt="" />
+          </div>
                   <CustomConnectWallet />
                 </div>
             </div>
