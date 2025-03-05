@@ -3,12 +3,10 @@ import dynamic from "next/dynamic";
 import React from "react";
 
 import BlockchainGrid from "../BlockchainGrid";
-import GasFeeUI from "../GasFeeTracker";
+
 import HeroHeader from "../HeroHeader";
-import ToolsGrid from "../ToolsGrid";
-// import FearGreedWidget from "../FearGreedWidget";
-// import CoinMarketCapMarquee from "../CoinMarketCapMarquee";
-// import CoinMarquee from "../CoinMarquee";
+
+
 
 const ECommerce: React.FC = () => {
   return (
@@ -24,8 +22,8 @@ const ECommerce: React.FC = () => {
 
         <BlockchainGrid />
 
-        <ToolsGrid />
-        <GasFeeUI />
+     
+       
         {/* <FearGreedWidget/> */}
       </div>
     </>
