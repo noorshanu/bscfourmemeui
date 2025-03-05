@@ -1,9 +1,9 @@
 "use client";
-import React, { useState, ReactNode } from "react";
-import Sidebar from "@/components/Sidebar";
-import Header from "@/components/Header";
-import { Footer } from "../Footer";
-import StarBackground from "../StarBackground";
+import React, { useState, ReactNode, Suspense, lazy } from "react";
+const Sidebar = lazy(() => import("@/components/Sidebar"));
+
+const Footer = lazy(() => import("../Footer"));
+const StarBackground = lazy(() => import("../StarBackground"));
 
 export default function DefaultLayout({
   children,
@@ -19,12 +19,12 @@ export default function DefaultLayout({
 
   return (
     <>
-      {/* Page Wrapper Start */}
       <div className=" ">
-        <StarBackground/>
+        <Suspense fallback={<div className="min-h-[100px]" />}>
+          <StarBackground/>
+        </Suspense>
       </div>
       <div className="flex">
-        {/* Sidebar Start */}
         <div
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
@@ -32,38 +32,32 @@ export default function DefaultLayout({
             isCollapsed ? " w-0 sm:w-22" : " w-auto sm:w-[14.05rem]"
           }`}
         >
-          <Sidebar
-            sidebarOpen={sidebarOpen}
-            setSidebarOpen={setSidebarOpen}
-            isCollapsed={isCollapsed}
-            setIsCollapsed={setIsCollapsed}
-          />
+          <Suspense fallback={<div className="w-22 h-screen bg-gray-100/10" />}>
+            <Sidebar
+              sidebarOpen={sidebarOpen}
+              setSidebarOpen={setSidebarOpen}
+              isCollapsed={isCollapsed}
+              setIsCollapsed={setIsCollapsed}
+            />
+          </Suspense>
         </div>
-        {/* Sidebar End */}
 
-        {/* Content Area Start */}
         <div
           className={`relative flex  flex-1 flex-col transition-[margin-left] duration-500 ease-in-out ${
             isCollapsed ? "lg:ml-0" : "lg:ml-[0rem]"
           }`}
         >
-          {/* Header Start */}
-          {/* <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} /> */}
-          {/* Header End */}
-
-          {/* Main Content Start */}
           <main>
-          <div className="background relative z-10"></div>
+            <div className="background relative z-10"></div>
             <div className="mx-auto max-w-full p-2 md:p-4 2xl:p-2">
               {children}
             </div>
-            <Footer />
+            <Suspense fallback={<div className="h-20" />}>
+              <Footer />
+            </Suspense>
           </main>
-          {/* Main Content End */}
         </div>
-        {/* Content Area End */}
       </div>
-      {/* Page Wrapper End */}
     </>
   );
 }
