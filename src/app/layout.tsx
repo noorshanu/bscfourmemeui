@@ -64,8 +64,7 @@ export default function RootLayout({
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    // Remove artificial delay
-    setLoading(false);
+    setTimeout(() => setLoading(false), 1000);
   }, []);
 
   // Test function for toast
@@ -77,11 +76,6 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        {/* Add any other preconnect/preload tags for external resources */}
-      </head>
       <meta content="Pumpmint - your ultimate gateway to launching and bundling tokens on PumpFun! Jump in now before the next big wave leaves you behind!" property="og:title"/>
       <body suppressHydrationWarning={true} className="">
         <NextTopLoader />
