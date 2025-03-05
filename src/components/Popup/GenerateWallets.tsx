@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { createWorkerWalletToken } from "../../utils/api";
+// import { createWorkerWalletToken } from "../../utils/api";
 import { useAccount } from "wagmi";
 
 interface GenerateWalletsProps {
@@ -15,24 +15,24 @@ const GenerateWallets: React.FC<GenerateWalletsProps> = ({ tokenAddress }) => {
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
 
   // Function to handle creating a new worker wallet(s)
-  const handleCreateWorkerWallet = async () => {
-    setMessage(null);
-    setSuccessMessage(null);
+  // const handleCreateWorkerWallet = async () => {
+  //   setMessage(null);
+  //   setSuccessMessage(null);
 
-    if (!address || numberOfWorkers <= 0 || !tokenAddress) {
-      setMessage("Please enter a valid token address and number of worker wallets.");
-      return;
-    }
+  //   if (!address || numberOfWorkers <= 0 || !tokenAddress) {
+  //     setMessage("Please enter a valid token address and number of worker wallets.");
+  //     return;
+  //   }
 
-    try {
-      const res = await createWorkerWalletToken(address, tokenAddress, numberOfWorkers);
-      setSuccessMessage(`Worker Wallet(s) Created Successfully: ${res.data.message}`);
-      setNumberOfWorkers(1); // Reset the number of workers after creation
-    } catch (error) {
-      console.error(error);
-      setMessage("Failed to create worker wallet(s).");
-    }
-  };
+  //   try {
+  //     const res = await createWorkerWalletToken(address, tokenAddress, numberOfWorkers);
+  //     setSuccessMessage(`Worker Wallet(s) Created Successfully: ${res.data.message}`);
+  //     setNumberOfWorkers(1); // Reset the number of workers after creation
+  //   } catch (error) {
+  //     console.error(error);
+  //     setMessage("Failed to create worker wallet(s).");
+  //   }
+  // };
 
   return (
     <>
@@ -54,7 +54,7 @@ const GenerateWallets: React.FC<GenerateWalletsProps> = ({ tokenAddress }) => {
               />
               <button
                 className="bg-white mt-4 w-full rounded-full font-maven px-4 py-2 font-semibold text-black"
-                onClick={handleCreateWorkerWallet}
+            
               >
                 Create Wallets
               </button>

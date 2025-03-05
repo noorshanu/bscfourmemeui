@@ -1,8 +1,7 @@
 "use client";
 
 import React from "react";
-import LiquidityForm from "./LiquidityForm";
-import WalletBuyParameters from "./WalletBuyParameters";
+
 import SniperToken from "./SniperToken";
 
 const TokenBundleUI = () => {

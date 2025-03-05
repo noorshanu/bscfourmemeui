@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState, useEffect, useCallback } from "react";
-import { listWallets, getBalance } from "../utils/api";
+
 import { useAccount } from "wagmi";
 import Popup from "./Popup/Popup";
 import GenerateWallets from "./Popup/GenerateWallets";
