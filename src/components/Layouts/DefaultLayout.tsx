@@ -21,8 +21,7 @@ export default function DefaultLayout({
     <>
       {/* Page Wrapper Start */}
       <div className=" ">
-       <StarBackground/>
-       <StarBackground/>
+        <StarBackground/>
       </div>
       <div className="flex">
         {/* Sidebar Start */}
