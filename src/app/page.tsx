@@ -2,6 +2,7 @@
 import ECommerce from "@/components/Dashboard/E-commerce";
 import { Metadata } from "next";
 import DefaultLayout from "@/components/Layouts/DefaultLayout";
+import Link from "next/link";
 
 
 
@@ -11,14 +12,9 @@ export default function Home() {
     <>
     
       <DefaultLayout>
-        <div className=" relative">
-          {/* <img src="/heroimg.png" alt="" className=" absolute top-[-10%] right-0 overflow-hidden" /> */}
-       <div className=" z-10">
+        <h1>test</h1>
 
-       <ECommerce />
-       </div>
-        </div>
-       
+        <Link href={'/four-meme'}>lest go</Link>
       </DefaultLayout>
     </>
   );
